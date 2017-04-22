@@ -1,0 +1,24 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "name": "sunny-express",
+  "description": "Project for Interaction Programming course",
+  "repository": "https://github.com/quimarnau/sunny-express",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.8.x",
+    "http-server": "^0.9.0",
+    "npm-run-all": "^4.0.2"
+  },
+    "dependencies": {
+    "bower": "^1.8.x",
+    "http-server": "^0.9.0",
+    "npm-run-all": "^4.0.2"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "npm-run-all start-frontend",
+    "start-frontend": "http-server app/ -a 0.0.0.0 -p $PORT"
+  }
+}

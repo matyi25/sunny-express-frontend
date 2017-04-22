@@ -1,0 +1,370 @@
+:root {
+	/*Basic theme colors for Sunny Express*/
+	--main-bg-color: #ffffff;
+	--bg-search-btn: #d3e6f9;
+	--toolbar-font: #ffffff;
+	/*Svg icon color fill*/
+	--validation-green: #59e65c;
+	--rejection-red: #ff4433;
+	/*Temperature color-theme*/
+	--min-temp: #3f51b5;
+	--max-temp: #ff5722;
+	/*Nav bar color theme*/
+	--nav-color: #003c9e;
+	/*Background colors for customized trips*/
+	--bg-blue: #99ccff;
+	--bg-green: #66ff66;
+	--bg-purple: #df80ff;
+	--bg-red: #ff6666;
+}
+
+html, body, .ng-scope, .container-fluid#main-container {
+	height: 100%;
+	/* For the moment don't add width: 100%, it messes the date picker style */
+}
+body {
+    margin:0;
+    background: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: compact;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+md-dialog {
+  height : 200px
+}
+md-progress-circular {
+  z-index: -1;
+}
+
+/* Navigation bar */
+md-nav-bar md-nav-ink-bar {
+	background: var(--nav-color);
+}
+nav {
+	background: var(--main-bg-color);
+	border-radius: 3px;
+	margin: 10px 0px;
+}
+.nav-item {
+	color: var(--nav-color);
+}
+
+#top-spacing-from-navbar {
+	height:2vh;
+	width: 100vw;
+}
+
+/* -- Home view ------------------------------------------ */
+
+#center-spacing-home {
+	height: 80vh;
+	width: 100vw;
+}
+#bottom-spacing-home {
+	height:2vh;
+	width: 100vw;
+}
+#header-form-home {
+	background-color: var(--main-bg-color);
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	padding-top: 10px;
+}
+#logo-home {
+	width: 75px;
+}
+#welcomingTitle {
+	font-size: 22px;
+}
+#welcomingTxt {
+	padding: 6px;
+}
+#body-form-home {
+	background-color: var(--main-bg-color);
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+	padding: 0px 20px 20px 20px;
+}
+.centered-txt {
+	text-align: center;
+}
+.pl-25 {
+	padding-left:25px;
+}
+.pt-5 {
+	padding-top: 5px;
+}
+.pt-8 {
+	padding-top: 8px;
+}
+.pt-10 {
+	padding-top:10px;
+}
+.pt-30 {
+	padding-top:30px;
+}
+.pb-5 {
+	padding-bottom: 5px;
+}
+.pb-10 {
+	padding-bottom: 10px;
+}
+#temperature {
+	padding-left:10px;
+	padding-right:10px;
+}
+#max-temp-value {
+	color: var(--max-temp);
+	font-size: 20px;
+	margin-top: 3px;
+}
+#min-temp-value {
+	color: var(--min-temp);
+	font-size: 20px;
+	margin-top: 3px;
+}
+.temp-icon {
+	width: 25px;
+	height: 25px;
+}
+#weather-icons {
+	padding-top: 2%
+}
+.help-div {
+	padding-top: 66px;
+}
+#help-icon {
+	height:20px;
+	width: 20px;
+}
+#help-dialog {
+	max-width:600px;
+	min-height: 80vh;	
+}
+.min-temp {
+	color: var(--min-temp);
+}
+.max-temp {
+	color: var(--max-temp);
+}
+.red {
+	color: var(--rejection-red);
+}
+.green {
+	color: var(--validation-green);
+}
+#logo-ending {
+	padding-bottom: 20px;
+}
+/* ------------------------------------------------------ */
+
+
+/* - Search view ---------------------------------------- */
+#main-container {
+	padding-left: 1.2%
+}
+#input-container {
+	background-color: var(--main-bg-color);
+}
+#map-container {
+	min-height: 500px;
+	height: 100%;
+}
+#input-container, #map-container{
+	border-radius: 3px;
+}
+#location-form {
+	background-color: var(--main-bg-color);
+	height: 80%;
+}
+#date-departure-label, #date-return-label {
+	left: 0px;
+}
+#search-btn {
+	width:100%;
+	background-color: var(--bg-search-btn);
+	margin: 15px 0px 0px 0px;
+}
+svg {
+	color: inherit;
+}
+.md-42 {
+	height: 42px;
+	width: 42px;
+}
+.md-32 {
+	height: 32px;
+	width: 32px;
+}
+.mt-10 {
+	margin-top: 10px;
+}
+.mts-10 {
+	margin-top: -10px;
+}
+.mr-15 {
+	margin-right: 15px;
+}
+.md-datepicker-input-container {
+    max-width: 60%;
+}
+
+/*Map view*/
+#temp-info-icon {
+	max-width: 18px;
+}
+/* ------------------------------------------------------ */
+
+/* Description view ------------------------------------- */
+#bottom-spacing-description {
+	min-height:2vh;
+	width: 100vw;
+}
+.padding-0 {
+	padding: 0px;
+}
+.md-headline {
+	font-size: 28px;
+}
+.card {
+	margin-top: -10px;
+}
+.md-18 {
+	height: 18px;
+	width: 18px;
+}
+#card-effect {
+	background-color: var(--main-bg-color);
+	border-radius: 3px;
+	box-shadow: 0px 5px 5px #1f2e2e;
+	max-height: 60%;
+	margin-top: 20px;
+}
+#city-pic {
+	max-width:350px;
+	max-height:150px
+}
+#md-weather-icon {
+	min-width: 70px;
+	min-width: 70px;
+}
+#sm-weather-icon {
+	min-width: 20px;
+	min-height: 20px;
+}
+.box-container {
+	margin-top:-10px;
+	max-height: 20vh;
+	margin-bottom: 50px;
+
+}
+.outter-box {
+	max-height: 30vh;
+	padding-left: 3%
+}
+.inner-box {
+	max-height:110px;
+	overflow-y: scroll;
+}
+#logo-airline {
+	max-height: 60px;
+}
+
+/* ------------------------------------------------------ */
+
+/* Calendar view ---------------------------------------- */
+.mb-15 {
+	margin-bottom: 15px;
+}
+#toolbar {
+	color: var(--toolbar-font);
+}
+#calendar {
+	padding: 10px;
+}
+.sm-cal {
+	max-height: 65vh;
+	overflow-y: scroll;
+}
+
+.md-cal {
+	max-height: 80vh;
+	overflow-y: scroll;
+}
+
+.lg-cal {
+	max-height: 80vh;
+}
+
+.white-event {
+	padding:10px;
+	border-radius: 3px;
+	min-height: 40px;
+}
+.blue-event {
+	background-color: var(--bg-blue);
+	padding:10px;
+	border-radius: 3px;
+	min-height: 40px;
+}
+.green-event {
+	background-color: var(--bg-green);
+	padding:10px;
+	border-radius: 3px;
+	min-height: 40px;
+}
+.purple-event {
+	background-color: var(--bg-purple);
+	padding:10px;
+	border-radius: 3px;
+	min-height: 40px;
+}
+.red-event {
+	background-color: var(--bg-red);
+	padding:10px;
+	border-radius: 3px;
+	min-height: 40px;
+}
+.white {
+	background-color: var(--main-bg-color);
+}
+.small-icon {
+	max-height: 50px;
+}
+.sm-color{
+	height: 30px;
+	width: 30px;
+}
+#bottom-spacing-calendar {
+	height: 3vh;
+}
+.angular-google-map-container { height: 80vh; }
+/* ------------------------------------------------------ */
+
+/* -- Profile ------------------------------------------- */
+#profile-container {
+	min-height: 500px;
+	background-color: var(--main-bg-color);
+	margin-top: 20px;
+	border-radius: 3px;
+}
+#profile-img {
+	border-radius: 100%;
+	margin-top: 15px;
+}
+#profile-content {
+	margin-top: 15px;
+}
+
+/* Loading */
+#loading {
+	visibility: hidden
+}
+#loading-dialog {
+	height:180px !important;
+	overflow: hidden;
+	height: 50%;
+	text-align:center;
+}

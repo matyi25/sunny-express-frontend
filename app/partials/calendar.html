@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="row">
+    <ng-include src="'partials/navbar.html'" class="col-md-8 col-md-offset-2"></ng-include>
+  </div>
+
+  <div class="row" id="top-spacing-from-navbar"></div>
+
+  <div class="row" id = "toolbar">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="row">
+        <div class="col-md-12" ng-hide = "tripSelected" align="center">
+          <p class="centered-txt pt-8">Click on a trip to modify it</p>
+        </div> 
+        <div ng-show = "tripSelected" class="col-md-12">
+          <div class="row" align = "center">
+            <p>Selected trip: {{tripTxt}}</p>
+          </div>
+          <div class="row" align = "center">
+            <div class="col-md-2 col-md-offset-1" layout = "row" layout-align="space-between center">
+              <p class="pt-8">Show forecast:</p>
+              <md-switch aria-label="Weather forecast display" ng-model="forecastDisplay" md-no-ink="" ng-click="onChange(forecastDisplay); $event.stopPropagation();"></md-switch>
+            </div>
+            <div class="col-md-4 col-md-offset-1" layout = "row" layout-align="space-between center">
+              <p class="pt-8">Background color:</p>
+              <md-button class="md-fab md-mini sm-color" ng-repeat="(key, color) in colorPanel" ng-click="changeColor(key); $event.stopPropagation();" aria-label={{key}} style="background-color: {{color}};"></md-button>
+              </div>
+              <div class="col-md-1 col-md-offset-2" layout = "row" layout-align="space-between center">
+                <md-button aria-label="Delete" ng-click="deleteTrip()">
+                  <img src="images/garbage.png">
+                </md-button>
+              </div>
+            </div>
+            <div class="row" align="center">
+              <md-button ng-click = "doneModifying()">
+                Done
+              </md-button>
+            </div>
+          </div>                        
+        </div> 
+      </div>
+    </div>
+  
+  <div class="container {{calendarSize}}">
+    <div class="row" id = "calendar">
+      <calendar-md flex layout layout-fill
+        calendar-direction="direction"
+        on-day-click="selectTrip"
+        title-format="'MMMM y'"
+        ng-model='selectedDate'
+        week-starts-on="firstDayOfWeek"
+        tooltips="tooltips"
+        day-format="dayFormat"
+        day-label-format="'EEE'"
+        day-label-tooltip-format="'EEEE'"
+        day-tooltip-format="'fullDate'"
+        day-content="fillCalendar"
+        disable-future-selection="false">
+      </calendar-md>
+    </div>
+    <div class="row" id="bottom-spacing-calendar"></div>
+  </div>
+</div>

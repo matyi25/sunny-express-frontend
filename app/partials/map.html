@@ -1,0 +1,28 @@
+<div class="row"  ng-controller="MapCtrl">
+    <ui-gmap-google-map id="map-div" class="col-md-12" center='mapFeatures.center' zoom='mapFeatures.zoom' ng-click="closeInfoWin()">
+        <ui-gmap-marker ng-repeat='city in getCityCoords()'
+                idKey='city.name'
+                coords='city.location'
+                events="marker.events"
+                icon="{url: iconPath + mapConditionIdName[city.majorityCondition] + ext}"
+        >
+        </ui-gmap-marker>
+        <ui-gmap-window
+                coords='infoWindow.coords'
+                show='infoWindow.showInfo'
+                closeClick='onCloseInfoWindow()'
+        >
+            <div>
+                <div layout="row" layout-align="center center">
+                    <h3 >{{infoWindow.cityName}}</h3>
+                    <img  ng-src="{{infoWindow.imageSrc}}">
+                </div>
+                <div>
+                <p> <img src="../images/temperature-min.png" id="temp-info-icon"> {{infoWindow.weatherResumeMin}}</p>
+                <p> <img src="../images/temperature-max.png" id="temp-info-icon"> {{infoWindow.weatherResumeMax}}</p>
+                </div>
+                <a ng-href="#!/description/{{infoWindow.cityName.toString()}}">Click</a> for details.
+            </div>
+        </ui-gmap-window>
+    </ui-gmap-google-map>
+</div>
