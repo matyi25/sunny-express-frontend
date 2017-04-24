@@ -18,10 +18,6 @@
 	--bg-red: #ff6666;
 }
 
-html, body, .ng-scope, .container-fluid#main-container {
-	height: 100%;
-	/* For the moment don't add width: 100%, it messes the date picker style */
-}
 body {
     margin:0;
     background: url('../images/background.jpg');
