@@ -213,6 +213,7 @@ sunnyExpressApp.controller('CalendarCtrl', function($scope, $filter, $mdDialog, 
 				setCalendarContent(d, null);
 				d.setTime(tmp.getTime());	
 			}
+			setCalendarContent(d, null);
 			closeToolBar();
 		}, function() {
 		});
