@@ -211,7 +211,7 @@ sunnyExpressApp.controller('CalendarCtrl', function($scope, $filter, $mdDialog, 
 				var tmp = new Date();
 				tmp.setDate(d.getDate() +1);
 				setCalendarContent(d, null);
-				d.setDate(tmp.getDate());	
+				d.setTime(tmp.getTime());	
 			}
 			closeToolBar();
 		}, function() {
