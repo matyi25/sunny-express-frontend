@@ -104,14 +104,14 @@ sunnyExpressApp.controller('CalendarCtrl', function($scope, $filter, $mdDialog, 
 		dates.push(trip.start);
 
 		date = new Date();
-		date.setDate(trip.start.getDate());
+		date.setTime(trip.start.getTime());
 
 
 		while (date.getTime() <= trip.end.getTime()) {
 			var tmp = new Date();
 			tmp.setDate(date.getDate() + 1);
 			dates.push(tmp);
-			date = tmp;
+			date.setTime(tmp.getTime())
 		}
 		return dates;
 	};
